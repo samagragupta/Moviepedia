@@ -3,12 +3,14 @@
     <button class="btn btn-success">New Movie</button>
   </div>
 </div>
+
 <hr>
 <div class="row">
+  <hr>
   <div class="col-xs-12">
     <app-movie-item
-    *ngFor="let movie-el of movies"
-    [movie]="movie-el"
-    (movieSelected)="onMovieSelected(movie-el)"></app-movie-item>
+    *ngFor="let moviee of movies"
+    [movie]="moviee"
+    (movieSelected)="onMovieSelected(moviee)"></app-movie-item>
   </div>
 </div>
