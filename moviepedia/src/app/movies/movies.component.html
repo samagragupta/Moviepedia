@@ -3,11 +3,6 @@
     <app-movie-list (movieWasSelected)="selectedMovie = $event"></app-movie-list>
   </div>
   <div class="col-md-7">
-    <app-movies-detail
-      *ngIf="selectedMovie; else infoText"
-      [movie]="selectedMovie"></app-movies-detail>
-    <ng-template #infoText>
-      <p>Please select a Movie!</p>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>
