@@ -2,14 +2,14 @@
   style="cursor: pointer;"
   [routerLink]="[index]"
   routerLinkActive="active"
-  class="list-group-item clearfix">
+  class="list-group-item clearfix item">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ movie.name }}</h4>
     <p class="list-group-item-text">{{ movie.description }}</p>
   </div>
   <span class="pull-right">
         <img
-          [src]="recipe.imagePath"
+          [src]="movie.imagePath"
           alt="{{ movie.name }}"
           class="img-responsive"
           style="max-height: 50px;">
