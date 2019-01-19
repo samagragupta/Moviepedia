@@ -9,6 +9,7 @@ import { MovieItemComponent } from './movies/movie-list/movie-item/movie-item.co
 import { MoviesDetailComponent } from './movies/movies-detail/movies-detail.component';
 import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MovieStartComponent } from './movies/movie-start/movie-start.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     MovieListComponent,
     MovieItemComponent,
     MoviesDetailComponent,
-    AllMoviesComponent
+    AllMoviesComponent,
+    MovieStartComponent
   ],
   imports: [
     BrowserModule,

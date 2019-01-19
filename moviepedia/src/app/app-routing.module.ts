@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MoviesComponent } from './movies/movies.component';
 import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { MoviesDetailComponent } from './movies/movies-detail/movies-detail.component';
+import { MovieStartComponent } from './movies/movie-start/movie-start.component';
 
 const appRoutes: Routes = [
     {path: 'movies', component: MoviesComponent, children: [
+        {path: '', component: MovieStartComponent},
         {path: ':id',component: MoviesDetailComponent}
     ]},
     {path: 'movielist', component: AllMoviesComponent},

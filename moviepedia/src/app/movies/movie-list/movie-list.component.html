@@ -9,8 +9,10 @@
   <hr>
   <div class="col-xs-12">
     <app-movie-item
-    *ngFor="let moviee of movies"
+    *ngFor="let moviee of movies; let i = index"
     [movie]="moviee"
-    (movieSelected)="onMovieSelected(moviee)"></app-movie-item>
+    (movieSelected)="onMovieSelected(moviee)">
+    [index]="i"
+  </app-movie-item>
   </div>
 </div>
