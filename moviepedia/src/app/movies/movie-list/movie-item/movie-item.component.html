@@ -1,8 +1,8 @@
 <a
-  style="cursor :pointer;"
+  style="cursor: pointer;"
   [routerLink]="[index]"
-  class="list-group-item clearfix"
-  (click)="onSelected()">
+  routerLinkActive="active"
+  class="list-group-item clearfix">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ movie.name }}</h4>
     <p class="list-group-item-text">{{ movie.description }}</p>

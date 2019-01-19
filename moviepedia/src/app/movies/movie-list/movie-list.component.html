@@ -3,7 +3,6 @@
     <button class="btn btn-success">New Movie</button>
   </div>
 </div>
-
 <hr>
 <div class="row">
   <hr>
@@ -11,8 +10,7 @@
     <app-movie-item
     *ngFor="let moviee of movies; let i = index"
     [movie]="moviee"
-    (movieSelected)="onMovieSelected(moviee)">
-    [index]="i"
+    [index]="i">
   </app-movie-item>
   </div>
 </div>

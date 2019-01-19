@@ -12,14 +12,14 @@ export class MovieItemComponent implements OnInit {
 
   @Input() movie: Movie;
   @Input() index: number;
-  @Output() movieSelected = new EventEmitter<void>();
+  // @Output() movieSelected = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelected() {
-    this.movieSelected.emit();
-  }
+  // onSelected() {
+  //   this.movieSelected.emit();
+  // }
 }
