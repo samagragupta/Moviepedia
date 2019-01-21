@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +12,7 @@ import { MoviesDetailComponent } from './movies/movies-detail/movies-detail.comp
 import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieStartComponent } from './movies/movie-start/movie-start.component';
+import { AllMoviesService } from './all-movies/all-movies.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,11 @@ import { MovieStartComponent } from './movies/movie-start/movie-start.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AllMoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

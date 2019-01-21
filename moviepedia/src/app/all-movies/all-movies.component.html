@@ -30,3 +30,24 @@
     </tbody>
   </table>
 </div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Upcoming Movies</h1>
+  </div>
+</div>
+
+<table *ngFor="let upcoming of upcoming_movies; let i = index">
+  <tbody>
+    <tr>
+      <td>
+        <img alt="poster" width="120" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}"/>
+      </td>
+      <td>
+        <h3>{{ upcoming.original_title }}</h3>
+        <!-- <p>{{moviee.overview}}</p> -->
+        <input type="button" value="More"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
