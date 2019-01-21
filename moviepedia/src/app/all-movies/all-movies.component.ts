@@ -8,16 +8,17 @@ import * as $ from 'jquery';
 })
 export class AllMoviesComponent implements OnInit {
 
-  constructor() { }
+  movies: any;
 
-  ngOnInit() {
-    $(document).ready(function(){
-      $('#btn1').click(function(){
-
-        alert('Button is clicked');
-      })
-
-    });
+  constructor() { 
+    this.movies = [
+      {id: 0, poster_src: "https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+       title: "Avengers: Infinity War", overview: "As the Avengers and their allies have continued to protect the world from threats too large"},
+      {id: 1, poster_src: "https://image.tmdb.org/t/p/w185/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
+       title: "	The Avengers", overview: "This is my second overview"},
+    ]
   }
+
+  ngOnInit() {}
 
 }

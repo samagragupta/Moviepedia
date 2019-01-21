@@ -1,5 +1,4 @@
-<div>
-        
+<div>      
   <table class="titleBar">
     <tbody>
       <tr>
@@ -16,4 +15,18 @@
 
   <input class="search" placeholder="Enter search term"/>
 
+  <table *ngFor="let moviee of movies">
+    <tbody>
+      <tr>
+        <td>
+          <img alt="poster" width="120" src="{{moviee.poster_src}}"/>
+        </td>
+        <td>
+          <h3>{{moviee.title}}</h3>
+          <p>{{moviee.overview}}</p>
+          <input type="button" value="More"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
