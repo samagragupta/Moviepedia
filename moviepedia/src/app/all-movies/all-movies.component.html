@@ -13,7 +13,10 @@
     </tbody>
   </table>
 
-  <input class="search" placeholder="Enter search term"/>
+  <input class="search" placeholder="Enter search term" name="movie" [(ngModel)]="movie"/>
+  <div class="col-3">
+    <button class="btn-block btn-info form-control" (click)="searchMovies()">Search</button>
+  </div>
 
   <table *ngFor="let moviee of movies">
     <tbody>
