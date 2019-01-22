@@ -38,13 +38,34 @@
 </div>
 
 <table *ngFor="let upcoming of upcoming_movies; let i = index">
-  <tbody>
+  <tbody *ngIf="i < 5">
     <tr>
       <td>
         <img alt="poster" width="120" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}"/>
       </td>
       <td>
         <h3>{{ upcoming.original_title }}</h3>
+        <!-- <p>{{moviee.overview}}</p> -->
+        <input type="button" value="More"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Popular Movies</h1>
+  </div>
+</div>
+
+<table *ngFor="let popular of popular_movies; let i = index">
+  <tbody *ngIf="i < 5">
+    <tr>
+      <td>
+        <img alt="poster" width="120" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}"/>
+      </td>
+      <td>
+        <h3>{{ popular.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
         <input type="button" value="More"/>
       </td>

@@ -15,4 +15,7 @@ export class AllMoviesService {
     return this._http.get(this.movie_url + 'discover/movie?primary_release_date.gte=2018-04-15&primary_release_date.lte=2018-07-31' + '&api_key=' + this.api_key);
   }
 
+  getPopularMovies() {
+    return this._http.get(this.movie_url + 'discover/movie?sort_by=popularity.desc' + '&api_key=' + this.api_key);
+  }
 }

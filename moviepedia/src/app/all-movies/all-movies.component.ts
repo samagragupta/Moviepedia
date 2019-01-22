@@ -11,6 +11,7 @@ export class AllMoviesComponent implements OnInit {
 
   movies: any;
   upcoming_movies: any;
+  popular_movies: any;
 
   constructor(public allMovieService: AllMoviesService) { 
     this.movies = [
@@ -22,6 +23,10 @@ export class AllMoviesComponent implements OnInit {
 
     this.allMovieService.getUpcomingMovies().subscribe(data => {
       this.upcoming_movies = data['results'];
+    });
+
+    this.allMovieService.getPopularMovies().subscribe(data => {
+      this.popular_movies = data['results'];
     });
 
   }
