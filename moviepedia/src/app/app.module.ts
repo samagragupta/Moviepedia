@@ -13,6 +13,7 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieStartComponent } from './movies/movie-start/movie-start.component';
 import { AllMoviesService } from './all-movies/all-movies.service';
+import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AllMoviesService } from './all-movies/all-movies.service';
     MovieItemComponent,
     MoviesDetailComponent,
     AllMoviesComponent,
-    MovieStartComponent
+    MovieStartComponent,
+    MovieEditComponent
   ],
   imports: [
     BrowserModule,
