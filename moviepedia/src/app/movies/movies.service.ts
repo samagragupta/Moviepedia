@@ -1,9 +1,10 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import {Subject} from 'rxjs';
 import { Movie } from './movie.model';
 
 @Injectable()
 export class MovieService {
-    movieSelected = new EventEmitter<Movie>();
+    moviesChanged = new Subject<Movie[]>();
 
     private movies: Movie[] = [
         new Movie(
@@ -24,4 +25,14 @@ export class MovieService {
     getMovies() {
         return this.movies.slice();
     }
+
+    addMovie(movie: Movie) {
+        this.movies.push(movie);
+        this.moviesChanged.next(this.movies.slice());
+      }
+    
+      updateMovie(index: number, newMovie: Movie) {
+        this.movies[index] = newMovie;
+        this.moviesChanged.next(this.movies.slice());
+      }
 }
