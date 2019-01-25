@@ -28,6 +28,10 @@ export class MovieListComponent implements OnInit, OnDestroy {
   this.movies = this.movieService.getMovies();
   }
 
+  onNewMovie() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

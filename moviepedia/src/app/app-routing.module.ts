@@ -9,6 +9,7 @@ import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 const appRoutes: Routes = [
     {path: 'movies', component: MoviesComponent, children: [
         {path: '', component: MovieStartComponent},
+        { path: 'new', component: MovieEditComponent },
         {path: ':id',component: MoviesDetailComponent},
         { path: ':id/edit', component: MovieEditComponent },
     ]},
