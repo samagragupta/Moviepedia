@@ -15,6 +15,7 @@ import { MovieStartComponent } from './movies/movie-start/movie-start.component'
 import { AllMoviesService } from './all-movies/all-movies.service';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { MovieService } from './movies/movies.service';
+import { AllMovieDetailsComponent } from './all-movies/all-movie-details/all-movie-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovieService } from './movies/movies.service';
     MoviesDetailComponent,
     AllMoviesComponent,
     MovieStartComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    AllMovieDetailsComponent
   ],
   imports: [
     BrowserModule,
