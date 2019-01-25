@@ -18,22 +18,6 @@
     <button class="btn-block btn-info form-control" (click)="searchMovies()">Search</button>
   </div>
 
-  <table *ngFor="let moviee of movies">
-    <tbody>
-      <tr>
-        <td>
-          <img alt="poster" width="120" src="{{moviee.poster_src}}"/>
-        </td>
-        <td>
-          <h3>{{moviee.title}}</h3>
-          <p>{{moviee.overview}}</p>
-          <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
 <div class="row">
   <div class="col-sm-12">
     <h1>Searched Movies</h1>
@@ -49,7 +33,7 @@
       <td>
         <h3>{{ movie.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        <a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
@@ -70,7 +54,7 @@
       <td>
         <h3>{{ upcoming.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
@@ -91,7 +75,7 @@
       <td>
         <h3>{{ popular.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
