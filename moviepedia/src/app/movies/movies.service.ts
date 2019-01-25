@@ -35,4 +35,9 @@ export class MovieService {
         this.movies[index] = newMovie;
         this.moviesChanged.next(this.movies.slice());
       }
+
+      deleteMovie(index: number) {
+        this.movies.splice(index, 1);
+        this.moviesChanged.next(this.movies.slice());
+      }
 }

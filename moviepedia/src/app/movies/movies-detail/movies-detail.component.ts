@@ -33,5 +33,9 @@ export class MoviesDetailComponent implements OnInit {
     this.router.navigate(['edit'], {relativeTo: this.route});
     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
+  onDeleteMovie() {
+    this.movieService.deleteMovie(this.id);
+    this.router.navigate(['/movies']);
+  }
 
 }
