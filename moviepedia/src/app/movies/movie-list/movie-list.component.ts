@@ -1,14 +1,16 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { Movie } from '../movie.model'
 import { MovieService } from '../movies.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })
-export class MovieListComponent implements OnInit {
+export class MovieListComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
   
   movies: Movie[] = [];
 
@@ -17,7 +19,16 @@ export class MovieListComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.movies = this.movieService.getMovies();
+    this.subscription = this.movieService.moviesChanged
+    .subscribe(
+      (movies: Movie[]) => {
+        this.movies = movies;
+      }
+    );
+  this.movies = this.movieService.getMovies();
   }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
