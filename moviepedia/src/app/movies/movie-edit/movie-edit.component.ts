@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movies.service';
 import { ActivatedRoute,Params, Router } from '@angular/router';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-movie-edit',
@@ -25,6 +25,7 @@ export class MovieEditComponent implements OnInit {
         this.editMode = params['id'] != null;
       }
     );
+    this.initForm();
   }
 
   onSubmit() {
@@ -39,5 +40,25 @@ export class MovieEditComponent implements OnInit {
   onCancel() {
     this.router.navigate(['../'], {relativeTo: this.route});
   }
+
+  private initForm() {
+    let movieName = '';
+    let movieImagePath = '';
+    let movieDescription = '';
+
+    if (this.editMode) {
+      const movie = this.movieService.getMovie(this.id);
+      movieName = movie.name;
+      movieImagePath = movie.imagePath;
+      movieDescription = movie.description;
+    }
+
+    this.movieForm = new FormGroup({
+      'name': new FormControl(movieName, Validators.required),
+      'imagePath': new FormControl(movieImagePath, Validators.required),
+      'description': new FormControl(movieDescription, Validators.required),
+    });
+  }
+
 
 }

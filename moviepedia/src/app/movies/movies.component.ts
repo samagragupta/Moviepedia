@@ -14,11 +14,11 @@ export class MoviesComponent implements OnInit {
   constructor(private movieservice: MovieService) { }
 
   ngOnInit() {
-    this.movieservice.movieSelected
-    .subscribe(
-      (movie: Movie) => {
-        this.selectedMovie = movie;
-      }
-    );
+    // this.movieservice.movieSelected
+    // .subscribe(
+    //   (movie: Movie) => {
+    //     this.selectedMovie = movie;
+    //   }
+    // );
   }
 }
