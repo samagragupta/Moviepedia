@@ -25,4 +25,8 @@ export class AllMoviesService {
     this.movie_string = movie;
     return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key);
   }
+
+  getMovie(id: number) {
+    return this._http.get(this.movie_url + 'movie/' + id + '?api_key=' + this.api_key);
+  }
 }
