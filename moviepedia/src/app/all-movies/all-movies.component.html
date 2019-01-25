@@ -27,7 +27,7 @@
         <td>
           <h3>{{moviee.title}}</h3>
           <p>{{moviee.overview}}</p>
-          <input type="button" value="More"/>
+          <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
         </td>
       </tr>
     </tbody>
@@ -49,7 +49,7 @@
       <td>
         <h3>{{ movie.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <input type="button" value="More"/>
+        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
@@ -70,7 +70,7 @@
       <td>
         <h3>{{ upcoming.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <input type="button" value="More"/>
+        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
@@ -91,7 +91,7 @@
       <td>
         <h3>{{ popular.original_title }}</h3>
         <!-- <p>{{moviee.overview}}</p> -->
-        <input type="button" value="More"/>
+        <a routerLink="/movie/{{ moviee.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </td>
     </tr>
   </tbody>
