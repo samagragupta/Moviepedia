@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <div>      
   <table class="titleBar">
     <tbody>
@@ -45,20 +48,43 @@
   </div>
 </div>
 
-<table *ngFor="let upcoming of upcoming_movies; let i = index">
-  <tbody *ngIf="i < 5">
-    <tr>
-      <td>
-        <img alt="poster" width="120" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}"/>
-      </td>
-      <td>
-        <h3>{{ upcoming.original_title }}</h3>
-        <!-- <p>{{moviee.overview}}</p> -->
-        <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div  class="col-sm-4" *ngFor="let upcoming of upcoming_movies; let i = index">
+    <div *ngIf="i < 9">
+      <div class="card mt-3 mb-3">
+        <div class="card-header text-center card bg-dark text-white">
+          {{ upcoming.release_date | date:'mediumDate' }}
+        </div>
+        <div class="card-body">
+          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}" style="height: 460px">
+          <h4 class="text-center font-weight-bold">{{ upcoming.original_title }}</h4>
+          <div class="description">
+            <span>Popularity</span>
+            : {{ upcoming.popularity  | number : '1.0-1' }}
+            <br>
+            <span>Vote count</span>
+            : {{ upcoming.vote_count }}
+          </div>
+        </div>
+        <hr>
+        <div class="extra-content">
+          <span class="float-right">
+            <h3>
+              <i class="glyphicon glyphicon-star"></i>
+              {{ upcoming.vote_average }}
+            </h3>
+    
+          </span>
+          <h4 class="date">
+            {{ upcoming.release_date }}
+          </h4>
+        </div>
+          <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-sm-12">
