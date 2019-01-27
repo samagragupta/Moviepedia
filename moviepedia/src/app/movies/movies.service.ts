@@ -31,20 +31,20 @@ export class MovieService {
     addMovie(movie: Movie) {
         this.movies.push(movie);
         this.moviesChanged.next(this.movies.slice());
-      }
+    }
     
-      updateMovie(index: number, newMovie: Movie) {
+    updateMovie(index: number, newMovie: Movie) {
         this.movies[index] = newMovie;
         this.moviesChanged.next(this.movies.slice());
-      }
+    }
 
-      deleteMovie(index: number) {
+    deleteMovie(index: number) {
         this.movies.splice(index, 1);
         this.moviesChanged.next(this.movies.slice());
-      }
+    }
 
-      setMovies(movies: Movie[]) {
+    setMovies(movies: Movie[]) {
         this.movies = movies;
         this.moviesChanged.next(this.movies.slice());
-      }
+    }
 }
