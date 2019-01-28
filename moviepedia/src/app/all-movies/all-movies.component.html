@@ -92,17 +92,40 @@
   </div>
 </div>
 
-<table *ngFor="let popular of popular_movies; let i = index">
-  <tbody *ngIf="i < 5">
-    <tr>
-      <td>
-        <img alt="poster" width="120" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}"/>
-      </td>
-      <td>
-        <h3>{{ popular.original_title }}</h3>
-        <!-- <p>{{moviee.overview}}</p> -->
-        <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div  class="col-sm-4" *ngFor="let popular of popular_movies; let i = index">
+    <div *ngIf="i < 9">
+      <div class="card mt-3 mb-3">
+        <div class="card-header text-center card bg-dark text-white">
+          {{ popular.release_date | date:'mediumDate' }}
+        </div>
+        <div class="card-body">
+          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 460px">
+          <h4 class="text-center font-weight-bold">{{ popular.original_title }}</h4>
+          <div class="description">
+            <span>Popularity</span>
+            : {{ popular.popularity  | number : '1.0-1' }}
+            <br>
+            <span>Vote count</span>
+            : {{ popular.vote_count }}
+          </div>
+        </div>
+        <hr>
+        <div class="extra-content">
+          <span class="float-right">
+            <h3>
+              <i class="glyphicon glyphicon-star"></i>
+              {{ popular.vote_average }}
+            </h3>
+    
+          </span>
+          <h4 class="date">
+            {{ popular.release_date }}
+          </h4>
+        </div>
+          <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
