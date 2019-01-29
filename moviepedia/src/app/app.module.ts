@@ -17,6 +17,7 @@ import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { MovieService } from './movies/movies.service';
 import { AllMovieDetailsComponent } from './all-movies/all-movie-details/all-movie-details.component';
 import { PeopleComponent } from './people/people.component';
+import { PeopleService } from './people/people.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { PeopleComponent } from './people/people.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AllMoviesService, MovieService],
+  providers: [AllMoviesService, MovieService, PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
