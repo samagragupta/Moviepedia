@@ -16,9 +16,20 @@
     </tbody>
   </table>
 
-  <input class="search" placeholder="Enter search term" name="movie" [(ngModel)]="movie"/>
+  <!-- <input class="search" placeholder="Enter search term" name="movie" [(ngModel)]="movie"/>
   <div class="col-3">
     <button class="btn-block btn-info form-control" (click)="searchMovies()">Search</button>
+  </div> -->
+
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" (click)="searchMovies()"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+    </form>
   </div>
 
 <div class="row">
