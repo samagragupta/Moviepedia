@@ -6,6 +6,7 @@ import { MoviesDetailComponent } from './movies/movies-detail/movies-detail.comp
 import { MovieStartComponent } from './movies/movie-start/movie-start.component';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { AllMovieDetailsComponent } from './all-movies/all-movie-details/all-movie-details.component';
+import { PeopleComponent } from './people/people.component';
 
 const appRoutes: Routes = [
     {path: 'movies', component: MoviesComponent, children: [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     ]},
     {path: 'movielist', component: AllMoviesComponent},
     { path: 'movie/:movieID', component: AllMovieDetailsComponent },
+    {path: 'people', component: PeopleComponent}
 ]
 
 @NgModule({
