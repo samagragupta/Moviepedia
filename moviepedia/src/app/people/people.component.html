@@ -5,5 +5,8 @@
 <div  class="col-sm-4" *ngFor="let people of people_list; let i = index">
   <div *ngIf="i < 9">
     {{people.name}}
+    {{ people.id }}
+    {{people.popularity}}
+    {{people.biography}}
   </div>
 </div>

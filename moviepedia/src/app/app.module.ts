@@ -18,6 +18,7 @@ import { MovieService } from './movies/movies.service';
 import { AllMovieDetailsComponent } from './all-movies/all-movie-details/all-movie-details.component';
 import { PeopleComponent } from './people/people.component';
 import { PeopleService } from './people/people.service';
+import { PeopleDetailComponent } from './people/people-detail/people-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PeopleService } from './people/people.service';
     MovieStartComponent,
     MovieEditComponent,
     AllMovieDetailsComponent,
-    PeopleComponent
+    PeopleComponent,
+    PeopleDetailComponent
   ],
   imports: [
     BrowserModule,
