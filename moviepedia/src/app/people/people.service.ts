@@ -13,4 +13,12 @@ export class PeopleService {
   getPeople() {
     return this._http.get(this.people_url + 'person/popular?api_key=' + this.api_key);
   }
+
+  // getImage(){
+  //   return this._http.get(this.people_url + 'person' + );
+  // }
+
+  getDetail(id: number){
+    return this._http.get(this.people_url + 'person/' + id + '?api_key=' + this.api_key )
+  }
 }
