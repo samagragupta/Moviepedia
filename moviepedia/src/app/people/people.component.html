@@ -2,7 +2,7 @@
   people works!
 </p>
 
-<div  class="col-sm-4" *ngFor="let people of people_list; let i = index">
+<!-- <div  class="col-sm-4" *ngFor="let people of people_list; let i = index">
   <div *ngIf="i < 9">
     {{people.name}}
     {{ people.id }}
@@ -10,7 +10,7 @@
     {{people.biography}}
     <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{ people.profile_path }}" class="img-fluid" alt="{{ people.name }}">
   </div>
-</div>
+</div> -->
 
 <!-- <div class="row">
   <div  class="col-sm-4" *ngFor="let people of people_list; let i = index">
@@ -56,6 +56,9 @@
       <div class="card mt-3 mb-3">
         <div class="card-header text-center card bg-dark text-white">
           {{people.name}}
+        </div>
+        <div class="card">
+          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{ people.profile_path }}" alt="{{ people.name }}" style="height: 460px">
         </div>
       </div>
     </div>
