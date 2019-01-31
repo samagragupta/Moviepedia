@@ -24,3 +24,20 @@
     </div>
   </div>
 </div>
+
+<div>
+  <div class="row" style="margin-top:30px">
+    <div class="col-xxs-12 col-xs-3 col-sm-4">
+      <h3 class="text-upper" style="margin-top:0">Crew</h3>
+    </div>
+  </div>
+  <hr style="margin-top:0">
+  <div class="row" *ngFor="let crew of crews; let i = index">
+      <div class="movie-list-item">
+          <a>
+            <img src="https://image.tmdb.org/t/p/w200/{{ crew.poster_path }}" alt="{{ people.name }}">
+          </a>
+          <h3>{{crew.title}}</h3>
+        </div>
+  </div>
+</div>

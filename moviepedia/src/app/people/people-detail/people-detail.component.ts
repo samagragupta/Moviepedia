@@ -9,6 +9,8 @@ import { PeopleService } from '../people.service';
 })
 export class PeopleDetailComponent implements OnInit {
   people: any;
+  crews: any;
+
 
   constructor(private router: ActivatedRoute, private peopleService: PeopleService) { }
 
@@ -17,6 +19,9 @@ export class PeopleDetailComponent implements OnInit {
       const id = params['peopleID'];
       this.peopleService.getDetail(id).subscribe(data => {
         this.people = data;
+      });
+      this.peopleService.getCrew(id).subscribe(data => {
+        this.crews = data['crew'];
       });
     });
   }
