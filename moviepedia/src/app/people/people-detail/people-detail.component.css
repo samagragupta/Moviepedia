@@ -1,86 +1,44 @@
-/* .img-circle {
-    display: inline-block;
+.biography {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.name, .birthday, .biography {
-    display: inline-block;
+p {
+  margin: 0 0 10.5px;
 }
 
-   body
-   {
-       font-family: 'Open Sans', sans-serif;
-   }
-   
-   .fb-profile img.fb-image-lg{
-       z-index: 0;
-       width: 100%;  
-       margin-bottom: 10px;
-   }
-   
-   .fb-image-profile
-   {
-       margin: -90px 10px 0px 50px;
-       z-index: 9;
-       width: 20%; 
-   }
-   
-   @media (max-width:768px)
-   {
-       
-   .fb-profile-text>h1{
-       font-weight: 700;
-       font-size:16px;
-   }
-   
-   .fb-image-profile
-   {
-       margin: -45px 10px 0px 25px;
-       z-index: 9;
-       width: 20%; 
-   }
-   }
+.media-object {
+    float: left;
+    width: 100%;
+}
 
+.container {
+  margin-top: -3%;
+}
 
-   .person-profile {
-    img {
-      width: 100%;
-    }
-  }
-  
-  @media (min-width:$screen-xxs-max) {
-    .form-movie-filter {
-      text-align: right;
-    }
-  }
-  
-  .form-movie-filter {
-  
-    .form-group {
-      display: inline-block;
-  
-      input {
-        width: 100%;
-      }
-    }
-  
-  } */
+.item {
+  position: relative;
+  margin: 1rem .625rem;
+  width: 200px;
+  text-align: center;
+}
 
-  .biography {
-    font-size: 1.4em;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  p {
-    margin: 0 0 10.5px;
-  }
+img {
+  height: 70%;
+}
 
-  .media-object {
-      float: left;
-      width: 100%;
-  }
+.character {
+  color: #9e9e9e;
+}
 
-  .container {
-    margin-top: -3%;
-  }
+.title {
+  color: #fff;
+}
 

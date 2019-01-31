@@ -21,7 +21,7 @@ export class PeopleDetailComponent implements OnInit {
         this.people = data;
       });
       this.peopleService.getCrew(id).subscribe(data => {
-        this.crews = data['crew'];
+        this.crews = data['cast'];
       });
     });
   }
