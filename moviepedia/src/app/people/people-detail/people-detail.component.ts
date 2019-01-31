@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { PeopleService } from '../people.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class PeopleDetailComponent implements OnInit {
 
   ngOnInit() {
     this.router.params.subscribe((params) => {
-      const id = params['movieID'];
+      const id = params['peopleID'];
       this.peopleService.getDetail(id).subscribe(data => {
         this.people = data;
       });
