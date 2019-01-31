@@ -24,6 +24,10 @@ p {
   text-align: center;
 }
 
+.item:hover {
+  transform: scale(1.1);
+}
+
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -40,5 +44,9 @@ img {
 
 .title {
   color: #fff;
+}
+
+p, h1 {
+  color: azure;;
 }
 

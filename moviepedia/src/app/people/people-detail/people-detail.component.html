@@ -27,7 +27,7 @@
 
 <div class="items">
   <div class="item" *ngFor="let crew of crews; let i = index">
-    <a>
+    <a routerLink="/movie/{{ crew.id }}"> 
       <img *ngIf="crew.poster_path" src="https://image.tmdb.org/t/p/w200/{{ crew.poster_path }}" alt="{{ people.name }}">
       <img *ngIf="!crew.poster_path" src="assets/images/no_poster.jpg" alt="No poster available">
       <p class="title">{{crew.title}}</p>
