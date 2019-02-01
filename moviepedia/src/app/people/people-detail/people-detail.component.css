@@ -1,0 +1,52 @@
+.biography {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 10.5px;
+}
+
+.media-object {
+    float: left;
+    width: 100%;
+}
+
+.container {
+  margin-top: -3%;
+}
+
+.item {
+  position: relative;
+  margin: 1rem .625rem;
+  width: 200px;
+  text-align: center;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img {
+  height: 70%;
+}
+
+.character {
+  color: #9e9e9e;
+}
+
+.title {
+  color: #fff;
+}
+
+p, h1 {
+  color: azure;;
+}
+

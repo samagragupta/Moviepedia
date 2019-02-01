@@ -7,6 +7,11 @@
     padding-left: 16px;
 }
 
+.input-group {
+    top: -19px;
+    margin-left: 20%;
+}
+
 .titleBar {
     background-color: #000;
     display: block;
@@ -16,6 +21,7 @@
 
 .date {
     margin-top: 27px;
+    float: left;
 }
 
 .extra-content {
@@ -30,4 +36,29 @@
 
 .container {
     margin-left: -1.5%;
+}
+
+span, div, h4 {
+    color: white;
+}
+
+.card {
+    background-color: black;
+}
+
+.movies .movie {
+    position: relative;
+    margin: 1rem .625rem;
+    width: 290px;
+    text-align: center;
+}
+
+.movie {
+    height: 710px;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
