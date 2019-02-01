@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="people">
+<div class="people" *ngIf="!search_result">
   <div *ngFor="let people of people_list; let i = index">
     <div *ngIf="i < 16">
       <div class="card mt-3 mb-3 person">
