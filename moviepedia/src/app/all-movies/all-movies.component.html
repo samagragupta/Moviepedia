@@ -38,9 +38,9 @@
   </div>
 </div> -->
 
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let movie of search_result; let i = index">
-    <div *ngIf="i < 9">
+<div class="movies">
+  <div  class="movie" *ngFor="let movie of search_result; let i = index">
+    <div *ngIf="i < 15">
       <div class="card mt-3 mb-3">
         <div class="card-header text-center card bg-dark text-white">
           {{ movie.release_date | date:'mediumDate' }}
@@ -81,9 +81,9 @@
   </div>
 </div>
 
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let upcoming of upcoming_movies; let i = index">
-    <div *ngIf="i < 9">
+<div class="movies">
+  <div  class="movie" *ngFor="let upcoming of upcoming_movies; let i = index">
+    <div *ngIf="i < 15">
       <div class="card mt-3 mb-3">
         <div class="card-header text-center card bg-dark text-white">
           {{ upcoming.release_date | date:'mediumDate' }}
@@ -125,9 +125,9 @@
   </div>
 </div>
 
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let popular of popular_movies; let i = index">
-    <div *ngIf="i < 9">
+<div class="movies">
+  <div  class="movie" *ngFor="let popular of popular_movies; let i = index">
+    <div *ngIf="i < 15">
       <div class="card mt-3 mb-3">
         <div class="card-header text-center card bg-dark text-white">
           {{ popular.release_date | date:'mediumDate' }}
