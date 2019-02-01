@@ -1,0 +1,23 @@
+.people .person {
+    position: relative;
+    margin: 1rem .625rem;
+    width: 290px;
+    text-align: center;
+}
+
+.person {
+    height: 514px;
+    width: 267pxs;
+}
+
+.person:hover {
+    transform: scale(1.03); 
+  }
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+

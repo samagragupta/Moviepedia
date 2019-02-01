@@ -1,7 +1,9 @@
-<div class="row">
-  <div class="col-sm-4" *ngFor="let people of people_list; let i = index">
-    <div *ngIf="i < 9">
-      <div class="card mt-3 mb-3">
+
+
+<div class="people">
+  <div *ngFor="let people of people_list; let i = index">
+    <div *ngIf="i < 16">
+      <div class="card mt-3 mb-3 person">
         <div class="card-header text-center card bg-dark text-white">
           {{people.name}}
         </div>
