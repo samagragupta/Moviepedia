@@ -2,10 +2,27 @@
 
 <div class="wrap">
   <div class="search">
-     <input type="text" class="searchTerm" placeholder="Search Actor/Actress">
-     <button type="submit" class="searchButton">
+     <input type="text" class="searchTerm" placeholder="Search Actor/Actress" name="person" [(ngModel)]="person">
+     <button type="submit" class="searchButton" (click)="searchpeople()">
        <i class="fa fa-search"></i>
     </button>
+  </div>
+</div>
+
+<div class="people">
+  <div *ngFor="let people of search_result; let i = index">
+    <div *ngIf="i < 16">
+      <div class="card mt-3 mb-3 person">
+        <div class="card-header text-center card bg-dark text-white">
+          {{people.name}}
+        </div>
+        <div class="card">
+          <a routerLink="/people/{{ people.id }}">
+            <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{ people.profile_path }}" alt="{{ people.name }}" style="height: 460px">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

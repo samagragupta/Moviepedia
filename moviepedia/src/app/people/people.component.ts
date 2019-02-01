@@ -8,6 +8,8 @@ import { PeopleService } from './people.service';
 })
 export class PeopleComponent implements OnInit {
   people_list: any;
+  search_result: any;
+  person: any;
 
   constructor(public peopleService: PeopleService) {
 
@@ -17,5 +19,11 @@ export class PeopleComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  searchpeople() {
+    this.peopleService.searchPerson(this.person).subscribe(data => {
+      this.search_result = data['results'];
+    });
   }
 }

@@ -1,25 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<div>      
-  <!-- <table class="titleBar">
-    <tbody>
-      <tr>
-        <td>
-          <img alt="app icon" width="50" src="https://s18672.pcdn.co/wp-content/uploads/2018/01/Movie-300x200.jpg"/>
-        </td>
-        <td width="8">
-        <td>
-          <h1>Movies List</h1>
-        </td>
-      </tr>
-    </tbody>
-  </table> -->
-
-  <!-- <input class="search" placeholder="Enter search term" name="movie" [(ngModel)]="movie"/>
-  <div class="col-3">
-    <button class="btn-block btn-info form-control" (click)="searchMovies()">Search</button>
-  </div> -->
+<div>
 
   <div class="container">
     <form action="/action_page.php">
@@ -31,12 +13,6 @@
       </div>
     </form>
   </div>
-
-<!-- <div class="row">
-  <div class="col-sm-12">
-    <h1>Searched Movies</h1>
-  </div>
-</div> -->
 
 <div class="movies">
   <div *ngFor="let movie of search_result; let i = index">
