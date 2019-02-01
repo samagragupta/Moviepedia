@@ -6,8 +6,8 @@
 .background {
     position: absolute;
     z-index: 0;
-    width: 134%;
-    margin-left: -206px;
+    width: 100%;
+    /* margin-left: -206px; */
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -16,5 +16,13 @@
 
 .container {
     width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: alpha(opacity=90);
+    opacity: 0.9;  
 }
+
+/* img {
+    opacity: 0.9;
+} */
 
