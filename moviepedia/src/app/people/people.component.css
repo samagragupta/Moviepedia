@@ -1,0 +1,57 @@
+.people .person {
+    position: relative;
+    margin: 1rem .625rem;
+    width: 290px;
+    text-align: center;
+}
+
+.person {
+    height: 514px;
+    width: 267pxs;
+}
+
+.person:hover {
+    transform: scale(1.03); 
+  }
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search {
+    width: 80%;
+    margin-left: 12%;
+  }
+
+  .searchTerm {
+    float: left;
+    width: 90%;
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 34px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+    display: inline;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    display: inline;
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+

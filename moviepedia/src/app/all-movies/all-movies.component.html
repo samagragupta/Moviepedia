@@ -1,25 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<div>      
-  <!-- <table class="titleBar">
-    <tbody>
-      <tr>
-        <td>
-          <img alt="app icon" width="50" src="https://s18672.pcdn.co/wp-content/uploads/2018/01/Movie-300x200.jpg"/>
-        </td>
-        <td width="8">
-        <td>
-          <h1>Movies List</h1>
-        </td>
-      </tr>
-    </tbody>
-  </table> -->
-
-  <!-- <input class="search" placeholder="Enter search term" name="movie" [(ngModel)]="movie"/>
-  <div class="col-3">
-    <button class="btn-block btn-info form-control" (click)="searchMovies()">Search</button>
-  </div> -->
+<div>
 
   <div class="container">
     <form action="/action_page.php">
@@ -32,16 +14,10 @@
     </form>
   </div>
 
-<!-- <div class="row">
-  <div class="col-sm-12">
-    <h1>Searched Movies</h1>
-  </div>
-</div> -->
-
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let movie of search_result; let i = index">
-    <div *ngIf="i < 9">
-      <div class="card mt-3 mb-3">
+<div class="movies">
+  <div *ngFor="let movie of search_result; let i = index">
+    <div *ngIf="i < 15">
+      <div class="card mt-3 mb-3 movie">
         <div class="card-header text-center card bg-dark text-white">
           {{ movie.release_date | date:'mediumDate' }}
         </div>
@@ -81,10 +57,10 @@
   </div>
 </div>
 
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let upcoming of upcoming_movies; let i = index">
-    <div *ngIf="i < 9">
-      <div class="card mt-3 mb-3">
+<div class="movies">
+  <div *ngFor="let upcoming of upcoming_movies; let i = index">
+    <div *ngIf="i < 15">
+      <div class="card mt-3 mb-3 movie">
         <div class="card-header text-center card bg-dark text-white">
           {{ upcoming.release_date | date:'mediumDate' }}
         </div>
@@ -125,10 +101,10 @@
   </div>
 </div>
 
-<div class="row">
-  <div  class="col-sm-4" *ngFor="let popular of popular_movies; let i = index">
-    <div *ngIf="i < 9">
-      <div class="card mt-3 mb-3">
+<div class="movies">
+  <div *ngFor="let popular of popular_movies; let i = index">
+    <div *ngIf="i < 15">
+      <div class="card mt-3 mb-3 movie">
         <div class="card-header text-center card bg-dark text-white">
           {{ popular.release_date | date:'mediumDate' }}
         </div>
