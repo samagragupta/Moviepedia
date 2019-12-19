@@ -1,11 +1,47 @@
 .search-bar {
     width: 70%;
-    margin: 2rem auto;
+    margin: 2rem auto 4rem auto;
 }
 
 .search-bar button {
     border-left: 1px solid lightgray;
 }
+
+
+.movie-type {
+    width: inherit;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movies .movie {
+    position: relative;
+    margin: 1rem .625rem;
+    width: 290px;
+    text-align: center;
+}
+
+.movie {
+    height: 710px;
+}
+
+
+
+
+.card {
+    background-color: black;
+}
+
+.card-body {
+    margin-bottom: -27px;
+}
+
 
 .titleBar {
     background-color: #000;
@@ -25,9 +61,7 @@
     margin-top: -35px;
 }
 
-.card-body {
-    margin-bottom: -27px;
-}
+
 
 .container {
     margin-left: -1.5%;
@@ -37,23 +71,3 @@ span, div, h4 {
     color: white;
 }
 
-.card {
-    background-color: black;
-}
-
-.movies .movie {
-    position: relative;
-    margin: 1rem .625rem;
-    width: 290px;
-    text-align: center;
-}
-
-.movie {
-    height: 710px;
-}
-
-.movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
