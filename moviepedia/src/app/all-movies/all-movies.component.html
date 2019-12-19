@@ -19,36 +19,25 @@
 <div class="movies">
   <div *ngFor="let movie of search_result; let i = index">
     <div *ngIf="i < 15">
-      <div class="card mt-3 mb-3 movie">
-        <div class="card-header text-center card bg-dark text-white">
-          {{ movie.release_date | date:'mediumDate' }}
+      <div class="card movie">
+        <div class="card-header bg-dark text-white">
+          &nbsp;{{ movie.release_date | date:'mediumDate' }}&nbsp;
         </div>
-        
-        <div class="card-body">
-          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 460px">
-          
-          <h4 class="text-center font-weight-bold">{{ movie.original_title }}</h4>
-          
-          <div class="description">
-            <span>Popularity</span>: {{ movie.popularity  | number : '1.0-1' }}
-            <br>
-            <span>Vote count</span>: {{ movie.vote_count }}
+
+        <div class="card-body clearfix">
+          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 460px">
+
+          <h4>{{ movie.original_title }}</h4>
+
+          <div class="movie-description">
+            <span>Popularity: {{ movie.popularity  | number : '1.0-1' }}</span>
+            <span>Vote count: {{ movie.vote_count }}</span>
+
+            <h5><i class="fas fa-star"></i>&nbsp;&nbsp;{{ movie.vote_average }}</h5>
           </div>
         </div>
-        
-        <hr>
-        
-        <div class="extra-content">
-          <span class="float-right">
-            <h3>
-              <i class="fas fa-star"></i>{{ movie.vote_average }}
-            </h3>
-          </span>
 
-          <h4 class="date">{{ movie.release_date }}</h4>
-        </div>
-          
-        <a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        <a routerLink="/movie/{{ movie.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
       </div>
     </div>
   </div>
@@ -64,36 +53,25 @@
 <div class="movies">
   <div *ngFor="let upcoming of upcoming_movies; let i = index">
     <div *ngIf="i < 15">
-      <div class="card mt-3 mb-3 movie">
-        <div class="card-header text-center card bg-dark text-white">
+      <div class="card movie">
+        <div class="card-header bg-dark text-white">
           {{ upcoming.release_date | date:'mediumDate' }}
         </div>
 
-        <div class="card-body">
-          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}" style="height: 460px">
-          
-          <h4 class="text-center font-weight-bold">{{ upcoming.original_title }}</h4>
-          
-          <div class="description">
-            <span>Popularity</span>: {{ upcoming.popularity  | number : '1.0-1' }}
-            <br>
-            <span>Vote count</span>: {{ upcoming.vote_count }}
+        <div class="card-body clearfix">
+          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}" style="height: 460px">
+
+          <h4>{{ upcoming.original_title }}</h4>
+
+          <div class="movie-description">
+            <span>Popularity: {{ upcoming.popularity  | number : '1.0-1' }}</span>
+            <span>Vote count: {{ upcoming.vote_count }}</span>
+
+            <h5><i class="fas fa-star"></i>&nbsp;&nbsp;{{ upcoming.vote_average }}</h5>
           </div>
         </div>
-        
-        <hr>
-        
-        <div class="extra-content">
-          <span class="float-right">
-            <h3>
-              <i class="fas fa-star"></i>{{ upcoming.vote_average }}
-            </h3>
-          </span>
 
-          <h4 class="date">{{ upcoming.release_date }}</h4>
-        </div>
-          
-        <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+        <a routerLink="/movie/{{ upcoming.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
       </div>
     </div>
   </div>
@@ -109,36 +87,25 @@
 <div class="movies">
   <div *ngFor="let popular of popular_movies; let i = index">
     <div *ngIf="i < 15">
-      <div class="card mt-3 mb-3 movie">
-        <div class="card-header text-center card bg-dark text-white">
+      <div class="card movie">
+        <div class="card-header bg-dark text-white">
           {{ popular.release_date | date:'mediumDate' }}
         </div>
-        
-        <div class="card-body">
-          <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 460px">
-          
-          <h4 class="text-center font-weight-bold">{{ popular.original_title }}</h4>
-          
-          <div class="description">
-            <span>Popularity</span>: {{ popular.popularity  | number : '1.0-1' }}
-            <br>
-            <span>Vote count</span>: {{ popular.vote_count }}
+
+        <div class="card-body clearfix">
+          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 460px">
+
+          <h4>{{ popular.original_title }}</h4>
+
+          <div class="movie-description">
+            <span>Popularity: {{ popular.popularity  | number : '1.0-1' }}</span>
+            <span>Vote count: {{ popular.vote_count }}</span>
+
+            <h5><i class="fas fa-star"></i>&nbsp;&nbsp;{{ popular.vote_average }}</h5>
           </div>
         </div>
-        
-        <hr>
-        
-        <div class="extra-content">
-          <span class="float-right">
-            <h3>
-              <i class="fas fa-star"></i>{{ popular.vote_average }}
-            </h3>
-          </span>
-          
-          <h4 class="date">{{ popular.release_date }}</h4>
-        </div>
-          
-        <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
+
+        <a routerLink="/movie/{{ popular.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
       </div>
     </div>
   </div>
