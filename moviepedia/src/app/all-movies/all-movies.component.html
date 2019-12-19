@@ -1,17 +1,29 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
 
-  <div class="container">
+<div>
+  <!--This has been replaced-->
+  <!--<div class="search-bar container">
     <form action="/action_page.php">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="movie" [(ngModel)]="movie">
+        
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit" (click)="searchMovies()"><i class="glyphicon glyphicon-search"></i></button>
         </div>
       </div>
     </form>
+  </div>-->
+
+  <div class="search-bar">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" name="movie" placeholder="Search" [(ngModel)]="movie">
+
+      <div class="input-group-append">
+        <button class="btn btn-light" type="button" (click)="searchMovies()"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
   </div>
 
 <div class="movies">
