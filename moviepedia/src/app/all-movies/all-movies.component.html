@@ -23,35 +23,39 @@
         <div class="card-header text-center card bg-dark text-white">
           {{ movie.release_date | date:'mediumDate' }}
         </div>
+        
         <div class="card-body">
           <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 460px">
+          
           <h4 class="text-center font-weight-bold">{{ movie.original_title }}</h4>
+          
           <div class="description">
-            <span>Popularity</span>
-            : {{ movie.popularity  | number : '1.0-1' }}
+            <span>Popularity</span>: {{ movie.popularity  | number : '1.0-1' }}
             <br>
-            <span>Vote count</span>
-            : {{ movie.vote_count }}
+            <span>Vote count</span>: {{ movie.vote_count }}
           </div>
         </div>
+        
         <hr>
+        
         <div class="extra-content">
           <span class="float-right">
             <h3>
-              <i class="glyphicon glyphicon-star"></i>
-              {{ movie.vote_average }}
+              <i class="fas fa-star"></i>{{ movie.vote_average }}
             </h3>
-    
           </span>
-          <h4 class="date">
-            {{ movie.release_date }}
-          </h4>
+
+          <h4 class="date">{{ movie.release_date }}</h4>
         </div>
-          <a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-        </div>
+          
+        <a routerLink="/movie/{{ movie.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </div>
     </div>
   </div>
+</div>
+
+
+  <!-- Upcoming Movies -->
 
 <div class="row">
   <div class="col-sm-12">
@@ -66,35 +70,39 @@
         <div class="card-header text-center card bg-dark text-white">
           {{ upcoming.release_date | date:'mediumDate' }}
         </div>
+
         <div class="card-body">
           <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.original_title }}" style="height: 460px">
+          
           <h4 class="text-center font-weight-bold">{{ upcoming.original_title }}</h4>
+          
           <div class="description">
-            <span>Popularity</span>
-            : {{ upcoming.popularity  | number : '1.0-1' }}
+            <span>Popularity</span>: {{ upcoming.popularity  | number : '1.0-1' }}
             <br>
-            <span>Vote count</span>
-            : {{ upcoming.vote_count }}
+            <span>Vote count</span>: {{ upcoming.vote_count }}
           </div>
         </div>
+        
         <hr>
+        
         <div class="extra-content">
           <span class="float-right">
             <h3>
-              <i class="glyphicon glyphicon-star"></i>
-              {{ upcoming.vote_average }}
+              <i class="glyphicon glyphicon-star"></i>{{ upcoming.vote_average }}
             </h3>
-    
           </span>
-          <h4 class="date">
-            {{ upcoming.release_date }}
-          </h4>
+
+          <h4 class="date">{{ upcoming.release_date }}</h4>
         </div>
-          <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-        </div>
+          
+        <a routerLink="/movie/{{ upcoming.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </div>
     </div>
   </div>
+</div>
+
+
+  <!-- Popular Movies -->
 
 <div class="row">
   <div class="col-sm-12">
@@ -109,32 +117,33 @@
         <div class="card-header text-center card bg-dark text-white">
           {{ popular.release_date | date:'mediumDate' }}
         </div>
+        
         <div class="card-body">
           <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 460px">
+          
           <h4 class="text-center font-weight-bold">{{ popular.original_title }}</h4>
+          
           <div class="description">
-            <span>Popularity</span>
-            : {{ popular.popularity  | number : '1.0-1' }}
+            <span>Popularity</span>: {{ popular.popularity  | number : '1.0-1' }}
             <br>
-            <span>Vote count</span>
-            : {{ popular.vote_count }}
+            <span>Vote count</span>: {{ popular.vote_count }}
           </div>
         </div>
+        
         <hr>
+        
         <div class="extra-content">
           <span class="float-right">
             <h3>
-              <i class="glyphicon glyphicon-star"></i>
-              {{ popular.vote_average }}
+              <i class="glyphicon glyphicon-star"></i>{{ popular.vote_average }}
             </h3>
-    
           </span>
-          <h4 class="date">
-            {{ popular.release_date }}
-          </h4>
+          
+          <h4 class="date">{{ popular.release_date }}</h4>
         </div>
-          <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
-        </div>
+          
+        <a routerLink="/movie/{{ popular.id }}" href="#" class="btn btn-block btn-info">Movie Details</a>
       </div>
     </div>
   </div>
+</div>
