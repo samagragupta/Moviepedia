@@ -1,13 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
   <a class="navbar-brand" routerLink="">Moviepedia</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/people">Actor/Actress</a>
-      <a class="nav-item nav-link" routerLink="/movies">Movie</a>
-    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/people">Actor/Actress</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/movies">Movie</a>
+      </li>
+    </ul>
   </div>
+  <!--
   <ul class="nav navbar-nav navbar-right">
-      <a style="cursor: pointer;" (click)="onSaveData()">Save Data</a>
-      <a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a>
-  </ul>
+    <a style="cursor: pointer;" (click)="onSaveData()">Save Data</a>
+    <a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a>
+  </ul>-->
 </nav>
